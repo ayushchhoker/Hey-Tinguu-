@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Riya ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    font-family: Arial;
+    overflow: hidden;
+    color: white;
+}
+
+/* Floating hearts */
+.heart-float {
+    position: absolute;
+    bottom: -20px;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Main box */
+.container {
+    text-align: center;
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* Name animation */
+.names {
+    font-size: 28px;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 20px yellow; }
+}
+
+/* Letter animation */
+.love-letter {
+    font-size: 20px;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 6s steps(60, end) forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Funny emoji */
+.funny {
+    font-size: 30px;
+    animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(0); }
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff006a;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff3a8a;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Music -->
+<audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<!-- Floating hearts -->
+<script>
+for(let i=0;i<20;i++){
+    let heart=document.createElement("div");
+    heart.className="heart-float";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(3+Math.random()*3)+"s";
+    document.body.appendChild(heart);
+}
+</script>
+
+<div class="container">
+    <div class="names">Ayush ❤️ Riya</div>
+
+    <h1>My Love 💖</h1>
+
+    <p class="love-letter">
+        My Dearest Riya,  
+        You are my smile, my happiness, my everything.  
+        Every moment with you feels magical.  
+        I never want to lose you. ❤️
+    </p>
+
+    <div class="funny">😜❤️😂</div>
+
+    <button onclick="showLove()">Click Me 💌</button>
+</div>
+
+<script>
+function showLove(){
+    alert("Riya ❤️ Will you be mine forever? 💍🥺");
+}
+</script>
+
+</body>
+</html>
